@@ -17,9 +17,9 @@ public class commonelements {
 		int e[] = {6,7,8,9,10};
 		int f[] = {11,12,13,14,15};
 		
-		int g[] = {};
-		int h[] = {};
-		int i[] = {};
+		int g[] = {2,3};
+		int h[] = {2,4};
+		int i[] = {2,4};
 		
 		int finalOutput[];
 		int firstOutput[] = commonElements(a,b);
@@ -47,7 +47,7 @@ public class commonelements {
 			if(x[i] == y[j]) {
 				
 				if(result.isEmpty() || result.get(result.size()-1) != x[i]) {
-					
+										
 					result.add(x[i]);
 				}
 				i++;

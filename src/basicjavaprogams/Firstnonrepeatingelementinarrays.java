@@ -1,6 +1,9 @@
 package basicjavaprogams;
 
-public class firstnonrepeatingelement {
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Firstnonrepeatingelementinarrays {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,7 +16,6 @@ public class firstnonrepeatingelement {
 		
 		int d[] = {10,5,6,10,6,5,9,12,15};
 		
-		// This is a wrong code. For fourth test case it is not working
 		
 		int ans;
 		ans = firstNonRepeatingElement(a);
@@ -27,33 +29,27 @@ public class firstnonrepeatingelement {
 		
 		ans = firstNonRepeatingElement(d);
 		System.out.println(ans);
-		
+
 
 	}
 	
 	public static int firstNonRepeatingElement (int x[]) {
 		
-		int i=0,j=0,count=0;
+		int count;
 		
-		if(x.length == 1) {
-			return x[i];
+		Map<Integer,Integer>countMap = new LinkedHashMap<>();
+		
+		for(int num:x) {
+			countMap.put(num, countMap.getOrDefault(num, 0)+1);
 		}
 		
-		while(i<x.length) {
-			count=1;
-			j=i+1;
-			while(j<x.length) {
-				if(x[i] == x[j]) {
-					count++;
-					j++;
-				}else {
-					j++;
-				}
+		for(int n:x) {
+			count = countMap.get(n);
+			
+			if(count==1) {
+				return n;
 			}
-			if(count == 1) {
-				return x[i];
-			}
-			i=j;
+			
 		}
 		
 		return -1;

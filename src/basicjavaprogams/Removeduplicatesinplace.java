@@ -11,8 +11,13 @@ public class Removeduplicatesinplace {
 		
 		int a[] = {27,11,27,39,12,27,39,46,87,11,11,93,11};
 		
+		int b[] = {10,10,10,10,12,12,12,15,15,18,18,19,20};
+		
 		int ans[];
 		ans = removeDuplicatesInPlace(a);
+		System.out.println(Arrays.toString(ans));
+		
+		ans = removeDuplicatesInPlace(b);
 		System.out.println(Arrays.toString(ans));
 
 	}
