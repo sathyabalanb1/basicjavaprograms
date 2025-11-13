@@ -8,6 +8,12 @@ public class Leapyear {
 		boolean ans;
 		ans=isLeapYear(1700);
 		System.out.println(ans);
+		
+		ans=isLeapYear(1808);
+		System.out.println(ans);
+		
+		ans=isLeapYear(1600);
+		System.out.println(ans);
 
 	}
 	

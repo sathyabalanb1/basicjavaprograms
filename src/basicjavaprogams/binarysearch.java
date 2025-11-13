@@ -9,11 +9,16 @@ public class binarysearch {
 		
 		int b[]= {12,25,39,44,68,71,83,97,111,135,150,176};
 		
+		int c[] = {2,6,7,11,15,18,22};
+		
 		boolean ans;
 		ans = binarySearch(a,17);
 		System.out.println(ans);
 		
 		ans = binarySearch(b,17);
+		System.out.println(ans);
+		
+		ans = binarySearch(c,8);
 		System.out.println(ans);
 
 	}
